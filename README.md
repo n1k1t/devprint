@@ -24,7 +24,7 @@ npm i -g @n1k1t/devprint
 ### General
 
 ```bash
-$ npx devprint -h
+$ devprint -h
 
 Usage: cli [options] [command]
 
@@ -41,7 +41,7 @@ Commands:
 ### Command `summary`
 
 ```bash
-$ npx devprint collect -h
+$ devprint collect -h
 
 Usage: cli summary [options]
 
@@ -57,7 +57,7 @@ Options:
 **Examples**
 
 ```bash
-$ npx devprint summary --after 2025-06-01 --until 2025-06-09
+$ devprint summary --after 2025-06-01 --until 2025-06-09
 
 n1k1t - 75 448 362 86
 ┌─────────┬───────────────────────┬───────────────────────────────────────┬────────┬────────────┬───────────┬────────┐
@@ -75,7 +75,7 @@ n1k1t - 75 448 362 86
 ```
 
 ```bash
-$ npx devprint summary --after 2025-06-01 --until 2025-06-09 -f json
+$ devprint summary --after 2025-06-01 --until 2025-06-09 -f json
 
 {"n1k1t":{"commits":[{"changes":{"files":2,"insertions":18,"deletions":7,"new":11},"date":"2025-06-06 10:46:35","message":"fix: not found expectation behavior"},{"changes":{"files":26,"insertions":220,"deletions":148,"new":72},"date":"2025-06-06 09:55:05","message":"fix: types"},{"changes":{"files":2,"insertions":20,"deletions":21,"new":-1},"date":"2025-06-05 14:15:16","message":"fix: .npmignore & .gitignore"},{"changes":{"files":2,"insertions":17,"deletions":19,"new":-2},"date":"2025-06-05 14:06:30","message":"fix: .npmignore & types"},{"changes":{"files":1,"insertions":2,"deletions":0,"new":2},"date":"2025-06-05 13:09:13","message":"fix: .npmignore"},{"changes":{"files":1,"insertions":6,"deletions":3,"new":3},"date":"2025-06-05 12:59:35","message":"fix: .npmignore"},{"changes":{"files":38,"insertions":162,"deletions":162,"new":0},"date":"2025-06-05 12:57:07","message":"fix: project types organization"},{"changes":{"files":3,"insertions":3,"deletions":2,"new":1},"date":"2025-06-05 12:51:49","message":"fix: gui redirect"}],"summary":{"files":75,"insertions":448,"deletions":362,"new":86}}}
 ```
