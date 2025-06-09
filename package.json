@@ -1,6 +1,6 @@
 {
   "name": "@n1k1t/devprint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI util that helps to summarize code changes using git",
   "main": "lib/src/index.js",
   "types": "lib/src/index.d.ts",
