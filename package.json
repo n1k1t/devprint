@@ -52,7 +52,12 @@
   },
   "keywords": [
     "git",
-    "cli"
+    "cli",
+    "team",
+    "management",
+    "commit",
+    "summary",
+    "developer"
   ],
   "homepage": "https://github.com/n1k1t/devprint",
   "author": "n1k1t",

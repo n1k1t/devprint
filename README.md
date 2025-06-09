@@ -41,7 +41,7 @@ Commands:
 ### Command `summary`
 
 ```bash
-$ devprint collect -h
+$ devprint summary -h
 
 Usage: cli summary [options]
 
