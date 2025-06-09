@@ -1,4 +1,3 @@
-
 <div align='center'>
   <h1>DevPrint</h1>
   <p>CLI util that helps to summarize code changes using git</p>
@@ -61,7 +60,7 @@ $ devprint summary --after 2025-06-01 --until 2025-06-09
 
 n1k1t - 75 448 362 86
 ┌─────────┬───────────────────────┬───────────────────────────────────────┬────────┬────────────┬───────────┬────────┐
-│ (index) │ date                  │ message                               │ files  │ insertions │ deletions │ new    │
+│ (index) │ date                  │ message                               │ files  │ insertions │ deletions │ diff   │
 ├─────────┼───────────────────────┼───────────────────────────────────────┼────────┼────────────┼───────────┼────────┤
 │ 0       │ '2025-06-06 10:46:35' │ 'fix: not found expectation behavior' │ 2      │ 18         │ 7         │ 11     │
 │ 1       │ '2025-06-06 09:55:05' │ 'fix: types'                          │ 26     │ 220        │ 148       │ 72     │
@@ -77,7 +76,7 @@ n1k1t - 75 448 362 86
 ```bash
 $ devprint summary --after 2025-06-01 --until 2025-06-09 -f json
 
-{"n1k1t":{"commits":[{"changes":{"files":2,"insertions":18,"deletions":7,"new":11},"date":"2025-06-06 10:46:35","message":"fix: not found expectation behavior"},{"changes":{"files":26,"insertions":220,"deletions":148,"new":72},"date":"2025-06-06 09:55:05","message":"fix: types"},{"changes":{"files":2,"insertions":20,"deletions":21,"new":-1},"date":"2025-06-05 14:15:16","message":"fix: .npmignore & .gitignore"},{"changes":{"files":2,"insertions":17,"deletions":19,"new":-2},"date":"2025-06-05 14:06:30","message":"fix: .npmignore & types"},{"changes":{"files":1,"insertions":2,"deletions":0,"new":2},"date":"2025-06-05 13:09:13","message":"fix: .npmignore"},{"changes":{"files":1,"insertions":6,"deletions":3,"new":3},"date":"2025-06-05 12:59:35","message":"fix: .npmignore"},{"changes":{"files":38,"insertions":162,"deletions":162,"new":0},"date":"2025-06-05 12:57:07","message":"fix: project types organization"},{"changes":{"files":3,"insertions":3,"deletions":2,"new":1},"date":"2025-06-05 12:51:49","message":"fix: gui redirect"}],"summary":{"files":75,"insertions":448,"deletions":362,"new":86}}}
+{"n1k1t":{"commits":[{"activity":{"files":2,"insertions":18,"deletions":7,"diff":11},"date":"2025-06-06 10:46:35","message":"fix: not found expectation behavior"},{"activity":{"files":26,"insertions":220,"deletions":148,"diff":72},"date":"2025-06-06 09:55:05","message":"fix: types"},{"activity":{"files":2,"insertions":20,"deletions":21,"diff":-1},"date":"2025-06-05 14:15:16","message":"fix: .npmignore & .gitignore"},{"activity":{"files":2,"insertions":17,"deletions":19,"diff":-2},"date":"2025-06-05 14:06:30","message":"fix: .npmignore & types"},{"activity":{"files":1,"insertions":2,"deletions":0,"diff":2},"date":"2025-06-05 13:09:13","message":"fix: .npmignore"},{"activity":{"files":1,"insertions":6,"deletions":3,"diff":3},"date":"2025-06-05 12:59:35","message":"fix: .npmignore"},{"activity":{"files":38,"insertions":162,"deletions":162,"diff":0},"date":"2025-06-05 12:57:07","message":"fix: project types organization"},{"activity":{"files":3,"insertions":3,"deletions":2,"diff":1},"date":"2025-06-05 12:51:49","message":"fix: gui redirect"}],"total":{"files":75,"insertions":448,"deletions":362,"diff":86}}}
 ```
 
 ## Additional

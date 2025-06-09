@@ -19,14 +19,14 @@ export default async (parameters: ISummaryCommandParameters = {}) => {
     '%r': (value) => colors.red(String(value)),
   };
 
-  Object.entries(report).forEach(([author, { commits, summary }]) => {
+  Object.entries(report).forEach(([author, { commits, total }]) => {
     console.log(
       colors.bold(author),
       '-',
-      colors.cyan(String(summary.files)),
-      colors.green(String(summary.insertions)),
-      colors.red(String(summary.deletions)),
-      colors.yellow(String(summary.new))
+      colors.cyan(String(total.files)),
+      colors.green(String(total.insertions)),
+      colors.red(String(total.deletions)),
+      colors.yellow(String(total.diff))
     );
 
     const table = buildTable(
@@ -34,10 +34,11 @@ export default async (parameters: ISummaryCommandParameters = {}) => {
         date: commit.date,
         message: commit.message,
 
-        files: `%c${commit.changes.files}`,
-        insertions: `%g${commit.changes.insertions}`,
-        deletions: `%r${commit.changes.deletions}`,
-        new: `%y${commit.changes.new}`,
+        files: `%c${commit.activity.files}`,
+        insertions: `%g${commit.activity.insertions}`,
+
+        deletions: `%r${commit.activity.deletions}`,
+        diff: `%y${commit.activity.diff}`,
       }))
     );
 

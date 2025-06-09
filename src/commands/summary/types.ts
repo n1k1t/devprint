@@ -6,17 +6,17 @@ export interface ISummaryCommandParameters {
   until?: string | number;
 }
 
-export interface ISummary {
-  new: number;
+export interface IActivity {
+  diff: number;
   files: number;
-  insertions: number;
   deletions: number;
+  insertions: number;
 }
 
 export interface ICommit {
   date: string;
   message: string;
-  changes: ISummary;
+  activity: IActivity;
 }
 
-export type TCompiledSummary = Record<string, { commits: ICommit[], summary: ISummary }>;
+export type TCompiledSummary = Record<string, { commits: ICommit[], total: IActivity }>;
